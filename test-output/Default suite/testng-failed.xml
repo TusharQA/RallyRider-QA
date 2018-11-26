@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="TestCases.Befor24hrs">
+        <methods>
+          <include name="trip"/>
+          <include name="myticket"/>
+          <include name="Base"/>
+          <include name="map"/>
+          <include name="destination"/>
+          <include name="share"/>
+        </methods>
+      </class> <!-- TestCases.Befor24hrs -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
