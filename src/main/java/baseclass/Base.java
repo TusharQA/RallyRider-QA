@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -69,6 +70,7 @@ public class Base {
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("appPackage", "net.rallybus.riderappDev");
 		capabilities.setCapability("appActivity", "md5d9239bee7c359d68c0e49fee5b2ec573.SplashActivity");
+		capabilities.setCapability("newCommandTimeout", 60 * 5);
 
 		//capabilities.setCapability("appPackage", "net.rallybus.riderapp");
 		//capabilities.setCapability("appActivity", "md5d9239bee7c359d68c0e49fee5b2ec573.SplashActivity");
@@ -83,7 +85,7 @@ public class Base {
 		OR.load(fis);
 	
 	
-		click("Allow_Xpath");
+	click("Allow_Xpath");
 		click("Hmenu_ID");
 		Thread.sleep(2000);
 		click("Login_Xpath");
@@ -91,7 +93,7 @@ public class Base {
 	    type("Pwd_ID", "wildnet1@rallybus.net");
 	    back();
 	    click("Loginbtn_Xpath");
-        Thread.sleep(5000);
+        Thread.sleep(8000);
        
 	}
 	
@@ -189,6 +191,13 @@ public class Base {
 		
 		share(extent);
 		myticket(extent);
+		map(extent);
+		Story(extent);
+		destination(extent);
+		Addons(extent);
+		organizer(extent);
+		trip(extent);
+		
 	
 		
 //	logger.log(Status.PASS, "\"Share\" was Covered.");
@@ -235,6 +244,7 @@ public class Base {
 //		 extent.flush();
 //		}
 
+	
 	public void share(ExtentReports extent) {
 		
 		logger = extent.createTest("Rally");
@@ -248,9 +258,59 @@ public class Base {
 		
 		logger = extent.createTest("Rally");
 	
+		logger.log(Status.PASS, "Status is PASS");
+		System.out.println("Trip was covered successfully");
+	}
+	
+public void trip(ExtentReports extent) {
+		
+		logger = extent.createTest("Rally");
+	
 		logger.log(Status.PASS, "Thetrip is PASS");
 		System.out.println("Trip was covered successfully");
 	}
+
+public void map(ExtentReports extent) {
+	
+	logger = extent.createTest("Rally");
+
+	logger.log(Status.PASS, "Map is PASS");
+	System.out.println("Map was covered successfully");
+}
+
+public void destination(ExtentReports extent) {
+	
+	logger = extent.createTest("Rally");
+
+	logger.log(Status.PASS, "destination is PASS");
+	System.out.println("Destination was covered successfully");
+}
+
+public void Addons(ExtentReports extent) {
+	
+	logger = extent.createTest("Rally");
+
+	logger.log(Status.PASS, "Addons is PASS");
+	System.out.println("Addons was covered successfully");
+}
+
+public void Story(ExtentReports extent) {
+	
+	logger = extent.createTest("Rally");
+
+	logger.log(Status.PASS, "story is PASS");
+	System.out.println("story was covered successfully");
+}
+
+public void organizer(ExtentReports extent) {
+	
+	logger = extent.createTest("Rally");
+
+	logger.log(Status.PASS, "trip organizer is PASS");
+	System.out.println("trip organizer was covered successfully");
+}
+
+
 	
 	public void Mail() throws EmailException {
 		

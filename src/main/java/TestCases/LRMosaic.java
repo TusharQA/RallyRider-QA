@@ -32,6 +32,20 @@ public class LRMosaic extends Base {
 	
 	@Test
 	public void Case1() throws IOException, InterruptedException {
+		
+		click("FordEcoDev_Xpath");
+		Thread.sleep(9000);
+		click("YellowstickyBtn_ID");
+		Thread.sleep(8000);
+		click("MapPageMyTckt_Xpath");
+		Thread.sleep(9000);
+		swipeU();
+		Thread.sleep(5000);
+		swipeU();
+		Thread.sleep(5000);
+		swipeU();
+		Thread.sleep(5000);
+		back();
 			  // click("BusLocation_ID");
 	  // Thread.sleep(9000);
 	 //  swipeU();
